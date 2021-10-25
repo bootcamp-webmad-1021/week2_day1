@@ -6,7 +6,7 @@
 >
 > JS | Array advanced methods: `.map()`, `.filter()`, `.reduce()`, `.reverse()` and `.sort()`
 > 
-> JS | Reference VS value / Shadow copy VS deep copy
+> JS | Reference VS value / Shallow copy VS deep copy
 
 
 ## Main points: array advanced methods
