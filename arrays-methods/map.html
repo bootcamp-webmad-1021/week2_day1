@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+
+        <script>
+
+
+            // .map() recibe como argumento una función
+            // .map() aplica la función a cada posición del array original
+            // .map() retorna un nuevo array de la misma longitud que el original con el retorno de la función en cada posición
+
+
+            // const arr1 = [1, 2, 3]
+
+
+
+            // const mappedArray = arr1.map(() => {
+            //     return "Teo"
+            // })
+
+            // console.log("El original", arr1)
+            // console.log("El mapeado", mappedArray)
+
+            // const numbers1 = [1, 2, 3]
+
+            // const doubledNumbers = numbers1.map(eachNumber => {
+            //     return eachNumber * 2
+            // })
+
+            // console.log('El array original permanece inmutable', numbers1)
+            // console.log('El nuevo array dispone de los valores duplicados', doubledNumbers)
+
+
+
+
+
+
+            // console.log('-----')
+
+
+
+
+
+            // const cities = ['madrid', 'gijon', 'valencia', 'berlin']
+
+            // const upperCities = cities.map(eachCity => {
+            //     const firstUpperLetter = eachCity.charAt(0).toUpperCase()
+            //     const theOtherLetters = eachCity.substring(1)
+            //     const fullName = firstUpperLetter + theOtherLetters
+
+            //     return fullName
+            // })
+
+            // console.log('Los nombres con mayúsculas:', upperCities)
+
+
+
+            // console.log('-----')
+
+
+            const students = [
+                {
+                    name: "Tony Parker",
+                    firstProject: 80,
+                    secondProject: 75,
+                    finalExam: 90
+                },
+                {
+                    name: "Marc Barchini",
+                    firstProject: 84,
+                    secondProject: 65,
+                    finalExam: 65
+                },
+                {
+                    name: "Claudia Lopez",
+                    firstProject: 45,
+                    secondProject: 95,
+                    finalExam: 99
+                }
+            ]
+
+
+
+            // // Sólo las notas finales
+
+            // const finalGrades = students.map(eachStudent => {
+
+            //     const projectGrade = (eachStudent.firstProject + eachStudent.secondProject) / 2
+            //     const projectsPart = projectGrade * .4
+            //     const examPart = eachStudent.finalExam * .4
+            //     const grade = projectsPart + examPart
+
+            //     return grade
+            // })
+
+            // console.log(finalGrades)
+
+
+
+            // // Notas finales y nombre
+
+            // const finalGrades = students.map(eachStudent => {
+
+            //     const projectGrade = (eachStudent.firstProject + eachStudent.secondProject) / 2
+            //     const projectsPart = projectGrade * .4
+            //     const examPart = eachStudent.finalExam * .4
+            //     const grade = projectsPart + examPart
+
+            //     const result = { name: eachStudent.name, finalGrade: grade }
+
+            //     return result
+            // })
+
+            // console.log(finalGrades)
+
+
+
+
+            // Toda la información
+
+            // const finalGrades = students.map(eachStudent => {
+
+            //     const projectGrade = (eachStudent.firstProject + eachStudent.secondProject) / 2
+            //     const projectsPart = projectGrade * .4
+            //     const examPart = eachStudent.finalExam * .4
+            //     const grade = projectsPart + examPart
+
+            //     // const result = {
+            //     //     name: eachStudent.name,
+            //     //     firstProject: eachStudent.firstProject,
+            //     //     secondProject: eachStudent.secondProject,
+            //     //     finalExam: eachStudent.finalExam,
+            //     //     finalGrade: grade
+            //     // }
+
+            //     // const result = {...eachStudent}
+            //     // result.grade = grade
+
+            //     // // Equivalencia con SPREAD OPERATOR (operador de propagación)
+            //     // const result = { ...eachStudent, grade: grade }
+
+            //     const result = { ...eachStudent, grade }
+
+
+            //     return result
+            // })
+
+
+            // console.log('Notas finales:', finalGrades)
+
+
+
+        </script>
+
+    </body>
+
+</html>

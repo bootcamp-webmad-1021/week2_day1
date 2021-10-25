@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+
+        <script>
+
+            
+            // .filter() recibe como argumento una función
+            // .filter() retorna un nuevo array de una longitud igual o inferior al original
+            // .filter() incluye en el array resultante aquellas posiciones (sin modificar) cuya iteración retorne truthy
+
+
+            const ages = [22, 3, 4, 22, 45, 3, 45, 3, 4, 54, 12, 9]
+
+            const lowerValues = ages.filter(eachAge => {
+                if (eachAge < 10) {
+                    return true
+                }
+            })
+
+            const multiples = ages.filter(eachAge => {
+                if (eachAge % 3 === 0) {
+                    return true
+                }
+            })
+
+            console.log('Los valores inferiores son', lowerValues)
+            console.log('Los valores múltiplos de tres son', multiples)
+
+
+
+
+            console.log('-----')
+
+
+
+            const people = [
+                { name: "Candice", age: 25 },
+                { name: "Tammy", age: 30 },
+                { name: "Allen", age: 20 },
+                { name: "Nettie", age: 21 },
+                { name: "Stuart", age: 17 },
+                { name: "Bill", age: 19 }
+            ]
+
+
+            const admitted = people.filter(eachPerson => {
+                return eachPerson.age >= 25
+            })
+
+            console.log('Hoy se van a tajar', admitted)
+
+
+
+
+
+            // console.log('-----')
+
+
+
+
+            const places = [
+                {
+                    title: "Awesome Suite 20' away from la Rambla",
+                    price: 200,
+                    type: "Private Room",
+                    pool: true,
+                    garage: false
+                },
+                {
+                    title: "Private apartment",
+                    price: 190,
+                    type: "Entire Place",
+                    pool: true,
+                    garage: true
+                },
+                {
+                    title: "Apartment with awesome views",
+                    price: 400,
+                    type: "Entire Place",
+                    pool: false,
+                    garage: false
+                },
+                {
+                    title: "Apartmentos in la Rambla",
+                    price: 150,
+                    type: "Private Room",
+                    pool: false,
+                    garage: true
+                },
+                {
+                    title: "Comfortable place in Barcelona´s center",
+                    price: 390,
+                    type: "Entire place",
+                    pool: true,
+                    garage: true
+                }
+            ]
+
+
+            const cheapPlaces = places.filter(eachPlace => {
+                if (eachPlace.price <= 200) {
+                    return true
+                }
+            })
+
+            // console.log(cheapPlaces)
+
+            const poolPlaces = places.filter(eachPlace => {
+                return eachPlace.pool
+            })
+
+            //Aprovechando el retorno automático de las arrow functions
+            // const poolPlaces = places.filter(eachPlace => eachPlace.pool)
+
+            console.log(poolPlaces)
+
+            const apartmentPlaces = places.filter(eachPlace => {
+                if (eachPlace.title.toLowerCase().includes('apartment')) {
+                    return true
+                }
+            })
+
+
+        // //
+
+        //Código "menos" limpio
+        // const bestDeals = places.filter(eachPlace => {
+        //     if(eachPlace.price <= 200 &&  eachPlace.garage === true) {
+        //         return true
+        //     }
+        // })
+
+        //Tras convertirlo a arrow function con una sola instrucción
+        // const bestDeals = places.filter(eachPlace => eachPlace.price <= 200 && eachPlace.garage)
+        
+
+        // console.log('Los sitios baratos son', cheapPlaces)
+        // console.log('Los sitios con piscina son', poolPlaces)
+        // console.log('Los apartamentos son', apartmentPlaces)
+        // console.log('Los ofertones son', bestDeals)
+
+
+        </script>
+    </body>
+
+</html>

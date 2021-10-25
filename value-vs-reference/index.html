@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            // // Paso por referencia
+            // const names = ['Miki', 'Andrés', 'Teo']
+
+            //Esto genera una referencia, no una copia :(
+            // const fakeCopy = names
+
+            // fakeCopy[2] = 'Sara'
+
+            // console.log('El original', names)
+            // console.log('La copia', fakeCopy)
+
+
+            // //Como realizar copias
+
+            // // Copia liviana :D
+            // const names2 = ['Miki', 'Andrés', 'Teo']
+
+            // const realCopy = [...names2]
+
+            // realCopy[2] = 'Sara'
+
+            // console.log('El original', names2)
+            // console.log('La copia', realCopy)
+
+
+
+
+            // //Copiando objetos anidados
+            // //copia de array (liviana)
+
+            // const people = [
+            //     { name: "Candice", age: 25 },
+            //     { name: "Tammy", age: 30 }
+            // ]
+
+            // const peopleCopy = [...people]    // <= una copia del array con sus referencias a objetos
+
+            // peopleCopy[1].age = 50
+
+            // El objeto interior no ha sido copiado :(
+            // console.log('El original:', people)
+            // console.log('La copia:', peopleCopy)
+
+
+            // copia de array (profunda)
+            // const people2 = [
+            //     { name: "Candice", age: 25 },
+            //     { name: "Tammy", age: 30 }
+            // ]
+
+            // JSON.parse nos permite hacer copias de todos los niveles de profundidad
+            // const peopleCopy2 = JSON.parse(JSON.stringify(people2))
+
+            // peopleCopy2[1].age = 50
+
+            // console.log('El original:', people2)
+            // console.log('La copia:', peopleCopy2)
+
+
+
+            //copia liviana de un único objeto
+            //const obj1 = {name: "teo"}
+            //
+            //const realCopy = {...obj1}
+
+
+        </script>
+    </body>
+
+</html>
